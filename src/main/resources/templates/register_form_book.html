@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register books</title>
+        <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm_theme_mischka.css">
+    </head>
+
+    <body>
+        <main>
+            <form action="#" th:action="@{/addBook}" th:object="${book}" method="post">
+                <fieldset>
+                    <legend>Dodaj nową książkę</legend>
+                    <label>Tytuł:</label>
+                    <input type="text" th:field="*{title}">
+                    <label>Autor:</label>
+                    <input type="text" th:field="*{author}">
+                    <button type="submit">Dodaj</button>
+                </fieldset>
+                <a href="/home">Wróć do głównego menu</a>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List of books</title>
+        <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm_theme_mischka.css">
+    </head>
+
+    <body>
+        <main>
+
+            <form action="#" th:action="@{/allBooksByKeyword}" method="post">
+
+                    <fieldset>
+                        <legend>Wyszukaj książkę:</legend>
+                        <input type="text" name="keyword">
+                        <button type="submit">Wyszukaj</button>
+                        <ul>
+                            <li th:each="books2 : ${book}">
+                                <span th:text="${books2.title}"></span><br>
+                                <span th:text="${books2.author}"></span>
+                            </li>
+                        </ul>
+
+                    </fieldset>
+                <a href="/home">Wróć do głównego menu</a>
+            </form>
+        </main>
+    </body>
+</html>

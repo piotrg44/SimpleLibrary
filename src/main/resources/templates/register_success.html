@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registation success</title>
+        <link rel="stylesheet" href="https://igoradamenko.github.io/awsm.css/css/awsm_theme_mischka.css">
+    </head>
+
+    <body>
+        <main>
+            <form action="#" th:action="@{/register}" th:object="${book}" method="post">
+                <h2>Registration succeeded</h2>
+                <fieldset>
+
+                    <span>Książka która została dodana:</span><br>
+                    <span th:text="${book.author}"></span><br>
+                    <span th:text="${book.title}"></span>
+
+                </fieldset>
+                <a href="/addBooks">Dodaj kolejną</a>
+
+            </form>
+        </main>
+    </body>
+</html>
